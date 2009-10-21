@@ -10,3 +10,4 @@ TODO
 public/assets/**/*
 public/system/**/*
 public/stylesheets/compiled/**/*
+*.tmp
