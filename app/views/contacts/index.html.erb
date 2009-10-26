@@ -1,0 +1,35 @@
+<h1>Contacts</h1>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<table border="1">
+  <thead>
+    <tr>
+			<td>Firstname</td>
+			<td>Lastname</td>
+			<td>Email</td>
+			<td>Twitter</td>
+			<td></td>
+			<td></td>
+		</tr>
+  </thead>
+	<tbody>
+	  <% @contacts.each do |contact| %>
+		<tr>
+			<td><%= h contact.first_name %></td>
+			<td><%= h contact.last_name %></td>
+			<td><%= h contact.email %></td>
+			<td><%= h contact.twitter %></td>
+			<td><%= link_to "[ Edit ]", edit_contact_path(contact) %></td>
+			<td><%= link_to "[ Delete ]", contact_path(contact), :method => "delete", :confirm => "Seguro?" %></td>
+		</tr>
+    <% end %>
+	</tbody>
+</table>
+
+<%= link_to "Add a contact", new_contact_path %>
+
+
+

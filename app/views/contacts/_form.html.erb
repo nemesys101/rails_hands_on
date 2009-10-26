@@ -1,0 +1,17 @@
+<%= error_messages_for :contact, :header_message => "Invalid Contact" %>
+<fieldset>
+  <legend>Personal Information</legend>
+  <%= form.text_field :first_name, :size => 15, :class => "first-name" %>
+  <label>First Name</label>
+  <%= form.text_field :last_name, :size => 15 %>
+  <label>Last Name</label>
+  <%= form.text_field :email %>
+  <label>Email</label>
+</fieldset>
+<fieldset>
+  <legend>Social Information</legend>
+  <label>Group</label>
+  <%= form.text_field :twitter %>
+  <label>Twitter</label>
+  <%= form.submit "save" %>
+</fieldset>

@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    = javascript_include_tag :all, :recursive => true
+    = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
+    = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+
+  %body#container
+
+    #page
+
+      %header
+        %nav
+          %ul
+            %li Home
+            %li Add Contact
+            %li Add Group
+            %li Mailer
+            %li My Account
+
+      #content
+        =yield
+
+      %footer
+        %ul
+          %li About Us
+          %li Contact Us
