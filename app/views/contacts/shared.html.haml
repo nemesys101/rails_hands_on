@@ -1,0 +1,15 @@
+#shared_info
+  %h1
+    = h "Shared Info for #{@contact.full_name}"
+  %h2
+    = h @contact.email
+  
+  %ul
+    - @contact.addresses.each do |address|
+      %li
+        %label Type: 
+        = address.type
+        %label Address
+        = address.name
+  
+  

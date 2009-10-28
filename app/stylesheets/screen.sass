@@ -31,16 +31,28 @@
     +full(12)
     :display block
     :text-align left
+    fieldset
+      :padding 1em
+    .col6
+      +columns(6,12)
+      +prefix(1)
+
 
   footer
     +full(12)
+    :display block
     ul
       li
         :float left
         :display inline-block
         :padding 1em
   
-
+  #shared_info
+    :border => dashed !loud_color
+    ul
+      :padding => 1em
+      li
+        :border => solid
 /* @end */
 
   
@@ -59,7 +71,6 @@
 
         
 /* @group OVERRIDES by page */
-
 
 
 /* @end */

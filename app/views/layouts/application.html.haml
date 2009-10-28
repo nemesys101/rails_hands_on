@@ -13,8 +13,10 @@
       %header
         %nav
           %ul
-            %li Home
-            %li Add Contact
+            %li
+              = link_to 'Home', root_path
+            %li
+              = link_to 'Add Contact', new_contact_path
             %li Add Group
             %li Mailer
             %li My Account

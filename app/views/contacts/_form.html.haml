@@ -1,0 +1,30 @@
+= error_messages_for :contact, :header_message => "Invalid Contact"
+%fieldset.col6
+  %legend Personal Information
+  %label First Name
+  = form.text_field :first_name, :size => 15, :class => "first-name"
+  %label Last Name
+  = form.text_field :last_name, :size => 15
+  %label Email
+  = form.text_field :email
+
+%fieldset.col6
+  %legend Social Information
+  %label Group
+  = form.select :group_id, Group.all.collect {|i| [i.name,i.id] }
+
+  %fieldset.col2
+    %legend Addresses
+    - form.fields_for :addresses do |addresses_form|
+      -debugger
+      %label Type
+      - if addresses_form.object.new_record?
+        = addresses_form.select :type, Address::AVAILABLE_TYPES
+      - else 
+        = addresses_form.object.type
+      
+      %label Name
+      = addresses_form.text_field :name
+
+  = form.submit "save" 
+

@@ -10,7 +10,7 @@
 			<td>Firstname</td>
 			<td>Lastname</td>
 			<td>Email</td>
-			<td>Twitter</td>
+			<td>Share</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -21,7 +21,7 @@
 			<td><%= h contact.first_name %></td>
 			<td><%= h contact.last_name %></td>
 			<td><%= h contact.email %></td>
-			<td><%= h contact.twitter %></td>
+			<td><%= shared_contact_url(devolve_el_chorizo(contact)) %></td>
 			<td><%= link_to "[ Edit ]", edit_contact_path(contact) %></td>
 			<td><%= link_to "[ Delete ]", contact_path(contact), :method => "delete", :confirm => "Seguro?" %></td>
 		</tr>
